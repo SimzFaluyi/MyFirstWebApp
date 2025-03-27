@@ -12,6 +12,30 @@ body {
     max-width: 1200px; /* Maximum width for large screens */
 }
 
+.header {
+    display: flex;
+    justify-content: space-between; /* Ensures items spread out */
+    align-items: center;
+    position: relative;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+.search-bar {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%); /* Centers vertically */
+}
+
+.search-bar input {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
 a {
     color: green;
     font-size: 18px;
@@ -126,6 +150,10 @@ img {
 
     .list-style {
         list-style-type: square;
+    }
+
+    .anime-genre {
+        text-align: center;
     }
 }
 

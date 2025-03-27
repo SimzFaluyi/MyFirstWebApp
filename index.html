@@ -8,11 +8,30 @@
     <link rel="stylesheet" href="styles.css"> <!-- External CSS file -->
 </head>
 <body>
-    
+
+    <div class="header">
+        <!--Search Bar-->
+        <form class="search-bar">
+            <input type="search" id="anime-search" name="anime-search" placeholder="Search Anime...">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
     <div class="container">
         <!--Headings-->
-        <h1 class="main-heading">Main Heading Test</h1>
-        <h2 class="subheading">Subheading 2 Test</h2>
+        <h1 class="main-heading">Samson's Anime Recommendations</h1>
+        <h2 class="subheading">Whats you Favourite Anime Genre?</h2>
+        <form class="anime-genre">
+            <label for="anime-genre">Choose an anime genre:</label>
+            <select id="anime-genre" name="anime-genre">
+                <option value="shonen">Shonen</option>
+                <option value="seinen">Seinen</option>
+                <option value="shojo">Shojo</option>
+                <option value="isekai">Isekai</option>
+                <option value="mecha">Mecha</option>
+            </select>
+            <input type="submit" value="Submit">
+        </form>
         <h3 class="subheading">Subheading 3 Test</h3>
         <h4 class="subheading">Subheading 4 Test</h4>
         <h5 class="subheading">Subheading 5 Test</h5>
