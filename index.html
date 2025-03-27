@@ -5,59 +5,53 @@
     <meta charset="UTF-8">
     <meta name="description" content="A demo of HTML elements, attributes, headings, and paragraphs">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        .highlight { color:darkred; font-weight: bold; }
-        .styled-box { border: 2px solid blue; padding: 10px; background-color: lightgray; }
-        .formatted-text { font-family: Arial, sans-serif; font-size: 16px; color: darkblue; }
-        body { background-color: #f4f4f4; font-family: Verdana, sans-serif; }
-        a { color: green; font-size: 18px; text-decoration: none; }
-        img { border: 3px solid black; border-radius: 10px; }
-    </style>
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS file -->
 </head>
 <body>
     
-    <!--Headings-->
-    <h1 style="color: darkred; text-align: center;">Main Heading Test</h1>
-    <h2 style="color: navy;">Subheading 2 Test</h2>
-    <h3 style="color: purple;">Subheading 3 Test</h3>
-    <h4 style="color: darkgreen;">Subheading 4 Test</h4>
-    <h5 style="color: brown;">Subheading 5 Test</h5>
-    <h6 style="color: darkred;">Subheading 6 Test</h6>
-    
-    <!--Paragraphs-->
-    <p title="This is a title" style="color: darkblue; font-style: italic;">Testing a paragraph with a title attribute.</p>
-    <p class="highlight">This Test is for a paragraph that has a class applied to it.</p>
-    <p style="color:blue; font-weight: bold; background-color: yellow; padding: 5px;">This Test is for a paragraph that has an inline style.</p>
-    
-    <!--Formatting-->
-    <p class="formatted-text"><b>Bold text</b>, <i>italic text</i>, <u>underlined text</u></p>
-    <p class="formatted-text"><strong>Important text</strong> and <em>emphasized text</em></p>
-    <p class="formatted-text"><small>Small text</small> and <mark style="background-color: orange;">highlighted text</mark></p>
-    <p class="formatted-text">Subscript: H<sub>2</sub>O and Superscript: x<sup>2</sup></p>
-    
-    <!--Links and Images-->
-    <a href="https://www.sportskeeda.com/anime/10-anime-broke-internet-2023" target="_blank" title="Top 10 Anime in 2025 (Actually 2023 lol)">Visit Anime Website</a>
-    <br>
-    <img src="https://staticg.sportskeeda.com/editor/2023/08/3626c-16921875120044-1920.jpg" alt="Anime Img" width="150">
-    
-    <!--Lists-->
-    <ul style="background-color: lightblue; padding: 10px;">
-        <li style="color: darkred;">Item 1</li>
-        <li style="color: darkgreen;">Item 2</li>
-        <li style="color: darkblue;">Item 3</li>
-    </ul>
-    
-    <ol style="background-color: lightyellow; padding: 10px;">
-        <li style="color: navy;">First item</li>
-        <li style="color: purple;">Second item</li>
-        <li style="color: brown;">Third item</li>
-    </ol>
-    
-    <!--Div and Span-->
-    <div class="styled-box">
-        <p>This is inside a styled div.</p>
+    <div class="container">
+        <!--Headings-->
+        <h1 class="main-heading">Main Heading Test</h1>
+        <h2 class="subheading">Subheading 2 Test</h2>
+        <h3 class="subheading">Subheading 3 Test</h3>
+        <h4 class="subheading">Subheading 4 Test</h4>
+        <h5 class="subheading">Subheading 5 Test</h5>
+        <h6 class="subheading">Subheading 6 Test</h6>
+        
+        <!--Paragraphs-->
+        <p class="p-italic">Testing a paragraph with a title attribute.</p>
+        <p class="highlight">This Test is for a paragraph that has a class applied to it.</p>
+        <p class="inline-style">This Test is for a paragraph that has an inline style.</p>
+        
+        <!--Formatting-->
+        <p class="formatted-text"><b>Bold text</b>, <i>italic text</i>, <u>underlined text</u></p>
+        <p class="formatted-text"><strong>Important text</strong> and <em>emphasized text</em></p>
+        <p class="formatted-text"><small>Small text</small> and <mark class="highlighted-text">highlighted text</mark></p>
+        <p class="formatted-text">Subscript: H<sub>2</sub>O and Superscript: x<sup>2</sup></p>
+        
+        <!--Links and Images-->
+        <a href="https://www.sportskeeda.com/anime/10-anime-broke-internet-2023" target="_blank" title="Top 10 Anime in 2025 (Actually 2023 lol)">Visit Anime Website</a>
+        <br>
+        <img src="https://staticg.sportskeeda.com/editor/2023/08/3626c-16921875120044-1920.jpg" alt="Anime Img" class="img-style">
+        
+        <!--Lists-->
+        <ul class="list-style">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+        
+        <ol class="list-style">
+            <li>First item</li>
+            <li>Second item</li>
+            <li>Third item</li>
+        </ol>
+        
+        <!--Div and Span-->
+        <div class="styled-box">
+            <p>This is inside a styled div.</p>
+        </div>
+        <p class="formatted-text">This is a <span class="green-text">green text span</span> inside a paragraph.</p>
     </div>
-    <p class="formatted-text">This is a <span style="color: green; font-weight: bold; text-decoration: underline;">green text span</span> inside a paragraph.</p>
-    
 </body>
 </html>

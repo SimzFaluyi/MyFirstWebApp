@@ -1,0 +1,158 @@
+/* General styles */
+body {
+    background-color: #f4f4f4;
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto; /* Center the content */
+    max-width: 1200px; /* Maximum width for large screens */
+}
+
+a {
+    color: green;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+img {
+    border: 3px solid black;
+    border-radius: 10px;
+    max-width: 100%; /* Ensures images scale properly */
+}
+
+/* Headings */
+.main-heading {
+    color: darkred;
+    text-align: center;
+}
+
+.subheading {
+    color: navy;
+}
+
+/* Paragraphs */
+.p-italic {
+    color: darkblue;
+    font-style: italic;
+}
+
+.highlight {
+    color: darkred;
+    font-weight: bold;
+}
+
+.inline-style {
+    color: blue;
+    font-weight: bold;
+    background-color: yellow;
+    padding: 5px;
+}
+
+/* Text formatting */
+.formatted-text {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: darkblue;
+}
+
+.formatted-text b {
+    font-weight: bold;
+}
+
+.highlighted-text {
+    background-color: orange;
+}
+
+/* Lists */
+.list-style {
+    padding: 10px;
+}
+
+.list-style li {
+    margin: 5px 0;
+}
+
+/* Div and Span */
+.styled-box {
+    border: 2px solid blue;
+    padding: 10px;
+    background-color: lightgray;
+}
+
+.green-text {
+    color: green;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Responsive Screen */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .main-heading {
+        font-size: 24px; /* Adjust heading size */
+    }
+
+    .subheading {
+        font-size: 20px;
+    }
+
+    .formatted-text {
+        font-size: 14px;
+    }
+
+    .list-style {
+        font-size: 14px;
+    }
+
+    img {
+        width: 100%; /* Make images full width on mobile */
+    }
+
+    /* Make headings stack vertically */
+    .main-heading, .subheading {
+        text-align: center;
+    }
+
+    .list-style {
+        list-style-type: square;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .main-heading {
+        font-size: 36px;
+    }
+
+    .subheading {
+        font-size: 24px;
+    }
+
+    .formatted-text {
+        font-size: 18px;
+    }
+
+    .list-style {
+        font-size: 16px;
+    }
+
+    .container {
+        display: grid;
+        gap: 10px;
+    }
+
+    .img-style {
+        width: 100%; /* Image width is 100% within its grid column */
+        border-radius: 5px;
+    }
+}
