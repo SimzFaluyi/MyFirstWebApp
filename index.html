@@ -9,13 +9,15 @@
 </head>
 <body>
 
-    <div class="header">
+    <header class="header">
+        <button id="toggle-theme">Toggle Dark Mode</button>
         <!--Search Bar-->
         <form class="search-bar">
             <input type="search" id="anime-search" name="anime-search" placeholder="Search Anime...">
-            <input type="submit" value="Submit">
+            <div id="suggestions" class="suggestions-box"></div>
+            <!-- <input type="submit" value="Submit"> -->
         </form>
-    </div>
+    </header>
 
     <div class="container">
         <!--Headings-->
@@ -72,5 +74,45 @@
         </div>
         <p class="formatted-text">This is a <span class="green-text">green text span</span> inside a paragraph.</p>
     </div>
+
+    <script>
+        // Dark Mode
+        const toggleTheme = document.getElementById("toggle-theme");
+        const body = document.body;
+
+        if (localStorage.getItem("theme") === "dark") {
+            body.classList.add("dark-mode");
+        }
+
+        toggleTheme.addEventListener("click", function() {
+            body.classList.toggle("dark-mode");
+            let theme = body.classList.contains("dark-mode") ? "dark" : "light";
+            localStorage.setItem("theme", theme);
+        });
+
+        // Search Bar Suggestions
+        const searchInput = document.getElementById("anime-search");
+        const suggestionsBox = document.getElementById("suggestions");
+
+        const animeGenres = ["Shonen", "Seinen", "Shojo", "Isekai", "Mecha", "Slice of Life", "Horror"];
+
+        searchInput.addEventListener("input", function() {
+            let query = this.value.toLowerCase();
+            suggestionsBox.innerHTML = ""; // Clear previous suggestions
+
+            let filteredGenres = animeGenres.filter(genre => genre.toLowerCase().includes(query));
+            
+            filteredGenres.forEach(genre => {
+                let div = document.createElement("div");
+                div.textContent = genre;
+                div.classList.add("suggestion");
+                div.addEventListener("click", function() {
+                    searchInput.value = genre;
+                    suggestionsBox.innerHTML = ""; // Clear suggestions
+                });
+                suggestionsBox.appendChild(div);
+            });
+        });
+    </script>
 </body>
 </html>
